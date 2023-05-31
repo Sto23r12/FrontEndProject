@@ -1,28 +1,31 @@
-import "../App.css";
-function ReviewCard({
-  reviewId,
-  title,
-  category,
-  designer,
-  owner,
-  img,
-  createdAt,
-  votes,
-  commentCount,
-}) {
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { getSingleReview } from "../../utils";
+
+function SingleReview() {
+  const [currentReview, setCurrentReview] = useState({});
+  const { review_id } = useParams();
+
+  useEffect(() => {
+    getSingleReview(review_id).then(({ review }) => {
+      setCurrentReview(review[0]);
+    });
+  }, [review_id]);
+
   return (
-    <div className="review-card">
-      <h3>{title}</h3>
-      <img src={img} alt={`Image for ${title}`} />
-      <p>Review ID: {reviewId}</p>
-      <p>Category: {category}</p>
-      <p>Designer: {designer}</p>
-      <p>Owner: {owner}</p>
-      <p>Created At: {createdAt}</p>
-      <p>Votes: {votes}</p>
-      <p>Comment Count: {commentCount}</p>
-    </div>
+    <main>
+      <p>Id: {currentReview.review_id}</p>
+      <h2>{currentReview.title}</h2>
+      <img src={currentReview.review_img_url}></img>
+      <p>{currentReview.review_body}</p>
+      <p>Designer: {currentReview.designer}</p>
+      <p>Category: {currentReview.category}</p>
+      <p>Owner: {currentReview.owner}</p>
+      <p>Created At: {currentReview.created_at}</p>
+      <p>Votes: {currentReview.votes}</p>
+      <p>Comments: {currentReview.comments}</p>
+    </main>
   );
 }
 
-export default ReviewCard;
+export default SingleReview;

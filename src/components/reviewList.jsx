@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getReviews } from "../../utils";
-import ReviewCard from "./reviewCard";
+
+import SingleReview from "./reviewCard";
 
 import "../App.css";
 
@@ -12,28 +14,26 @@ export function GetReviews() {
     getReviews().then(({ reviews }) => {
       setReviews(reviews);
     });
-  });
+  }, []);
 
   return (
     <div className="page-container">
       <section className="Reviews">
         <h2>Reviews:</h2>
-
         {reviews.map((singleReview, index) => {
           return (
-            <ReviewCard
-              key={singleReview.review_id}
-              reviewId={singleReview.review_id}
-              title={singleReview.title}
-              img={singleReview.review_img_url}
-              category={singleReview.category}
-              designer={singleReview.designer}
-              owner={singleReview.owner}
-              createdAt={singleReview.created_at}
-              votes={singleReview.votes}
-              commentCount={singleReview.comment_count}
-              isActive={index === currentReview}
-            />
+            <section className="Review">
+              <li key={singleReview.review_id}>
+                <strong>{singleReview.title}</strong>
+                <br></br>
+                <img src={singleReview.review_img_url}></img>
+                <Link to={`/api/reviews/${singleReview.review_id}`}>
+                  <br></br>
+                  <button type="button">Details:</button>
+                </Link>
+                <p>Category: {singleReview.category}</p>
+              </li>
+            </section>
           );
         })}
       </section>

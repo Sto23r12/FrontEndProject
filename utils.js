@@ -11,3 +11,11 @@ export function getReviews() {
     }
   );
 }
+
+export function getSingleReview(review_id) {
+  return fetch(
+    `https://charliesdatabase.onrender.com/api/reviews/${review_id}`
+  ).then((res) => {
+    return res.json();
+  });
+}
