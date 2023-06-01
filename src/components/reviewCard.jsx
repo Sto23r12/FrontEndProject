@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getSingleReview } from "../../utils";
+import "../App.css";
 
 function SingleReview() {
   const [currentReview, setCurrentReview] = useState({});
@@ -13,18 +14,22 @@ function SingleReview() {
   }, [review_id]);
 
   return (
-    <main>
-      <p>Id: {currentReview.review_id}</p>
-      <h2>{currentReview.title}</h2>
-      <img src={currentReview.review_img_url}></img>
-      <p>{currentReview.review_body}</p>
-      <p>Designer: {currentReview.designer}</p>
-      <p>Category: {currentReview.category}</p>
-      <p>Owner: {currentReview.owner}</p>
-      <p>Created At: {currentReview.created_at}</p>
-      <p>Votes: {currentReview.votes}</p>
-      <p>Comments: {currentReview.comments}</p>
-    </main>
+    <section className="SingleReview">
+      <main>
+        <p>Id: {currentReview.review_id}</p>
+        <h2>{currentReview.title}</h2>
+        <img src={currentReview.review_img_url}></img>
+        <p>{currentReview.review_body}</p>
+        <section className="Details">
+          <p>Designer: {currentReview.designer}</p>
+          <p>Category: {currentReview.category}</p>
+          <p>Owner: {currentReview.owner}</p>
+          <p>Created At: {currentReview.created_at}</p>
+          <p>Votes: {currentReview.votes}</p>
+          <p>Comments: {currentReview.comments}</p>
+        </section>
+      </main>
+    </section>
   );
 }
 

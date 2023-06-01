@@ -23,16 +23,15 @@ export function GetReviews() {
         {reviews.map((singleReview, index) => {
           return (
             <section className="Review">
-              <li key={singleReview.review_id}>
-                <strong>{singleReview.title}</strong>
+              <p key={singleReview.review_id}>{singleReview.review_id}</p>
+              <strong>{singleReview.title}</strong>
+              <br></br>
+              <img src={singleReview.review_img_url}></img>
+              <Link to={`/api/reviews/${singleReview.review_id}`}>
                 <br></br>
-                <img src={singleReview.review_img_url}></img>
-                <Link to={`/api/reviews/${singleReview.review_id}`}>
-                  <br></br>
-                  <button type="button">Details:</button>
-                </Link>
-                <p>Category: {singleReview.category}</p>
-              </li>
+                <button type="button">Details:</button>
+              </Link>
+              <p>Category: {singleReview.category}</p>
             </section>
           );
         })}
