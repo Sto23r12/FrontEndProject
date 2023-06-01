@@ -11,7 +11,7 @@ function App() {
         <h1>Games App!</h1>
       </header>
       <Routes>
-        <Route path="/api/reviews" element={<GetReviews />} />
+        <Route path="/reviews" element={<GetReviews />} />
       </Routes>
     </BrowserRouter>
   );
