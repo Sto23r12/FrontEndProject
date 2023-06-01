@@ -1,24 +1,41 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getSingleReview } from "../../utils";
+import { getSingleReview, getCommentsByReviewId } from "../../utils";
 import "../App.css";
+import CommentSection from "./CommentSection";
 
 function SingleReview() {
-  const [currentReview, setCurrentReview] = useState({});
   const { review_id } = useParams();
+  const [currentReview, setCurrentReview] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [comments, setComments] = useState([]);
+  const [showComments, setShowComments] = useState(false);
 
   useEffect(() => {
     getSingleReview(review_id).then(({ review }) => {
       setCurrentReview(review[0]);
+      setLoading(false);
     });
   }, [review_id]);
+
+  useEffect(() => {
+    getCommentsByReviewId(review_id).then((comments) => {
+      setComments(comments);
+    });
+  }, [review_id]);
+
+  const toggleComments = () => {
+    setShowComments(!showComments);
+  };
+
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
 
   return (
     <section className="SingleReview">
       <main>
-        <p>Id: {currentReview.review_id}</p>
         <h2>{currentReview.title}</h2>
-
         <img src={currentReview.review_img_url}></img>
         <br />
         <p>{currentReview.review_body}</p>
@@ -29,7 +46,10 @@ function SingleReview() {
           <p>Owner: {currentReview.owner}</p>
           <p>Created At: {currentReview.created_at}</p>
           <p>Votes: {currentReview.votes}</p>
-          <p>Comments: {currentReview.comments}</p>
+          <button className="comments-button" onClick={toggleComments}>
+            {showComments ? "Hide Comments" : "Show Comments"}
+          </button>
+          {showComments && <CommentSection comments={comments} />}
         </section>
       </main>
     </section>

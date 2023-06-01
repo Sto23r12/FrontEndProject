@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { GetReviews } from "./components/reviewList";
-import "./App.css";
-
 import SingleReview from "./components/reviewCard";
+
+import "./App.css";
 
 function App() {
   return (
