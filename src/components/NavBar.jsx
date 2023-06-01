@@ -15,7 +15,7 @@ export function NavBar() {
       <Link to="/reviews">
         <button type="button">Reviews</button>
       </Link>
-      <Link to="/comments">
+      <Link to="/reviews/:review_id/comments">
         <button type="button">Comments</button>
       </Link>
       <br></br>
