@@ -2,13 +2,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getReviews } from "../../utils";
 
-import SingleReview from "./reviewCard";
-
 import "../App.css";
 
 export function GetReviews() {
   const [reviews, setReviews] = useState([]);
-  const [currentReview, setCurrentReview] = useState(0);
 
   useEffect(() => {
     getReviews().then(({ reviews }) => {
@@ -19,7 +16,6 @@ export function GetReviews() {
   return (
     <div className="page-container">
       <section className="Reviews">
-        <h2>Reviews:</h2>
         {reviews.map((singleReview, index) => {
           return (
             <section className="Review">
@@ -27,8 +23,9 @@ export function GetReviews() {
                 <strong>{singleReview.title}</strong>
                 <br></br>
                 <img src={singleReview.review_img_url}></img>
+                <p>Owner: {singleReview.owner}</p>
+                <p>Date Created: {singleReview.created_at}</p>
                 <Link to={`/api/reviews/${singleReview.review_id}`}>
-                  <br></br>
                   <button type="button">Details:</button>
                 </Link>
                 <p>Category: {singleReview.category}</p>
