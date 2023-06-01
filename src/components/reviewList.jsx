@@ -28,7 +28,7 @@ export function GetReviews() {
               <br></br>
               <img src={singleReview.review_img_url}></img>
 
-              <Link to={`/api/reviews/${singleReview.review_id}`}>
+              <Link to={`/reviews/${singleReview.review_id}`}>
                 <br></br>
                 <button type="button">Details:</button>
               </Link>

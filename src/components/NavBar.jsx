@@ -9,13 +9,13 @@ export function NavBar() {
       <Link to="/">
         <button type="button">Home</button>
       </Link>
-      <Link to="/api/categories">
+      <Link to="/categories">
         <button type="button">Categories</button>
       </Link>
-      <Link to="/api/reviews">
+      <Link to="/reviews">
         <button type="button">Reviews</button>
       </Link>
-      <Link to="/api/comments">
+      <Link to="/comments">
         <button type="button">Comments</button>
       </Link>
       <br></br>
