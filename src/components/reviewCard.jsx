@@ -18,8 +18,11 @@ function SingleReview() {
       <main>
         <p>Id: {currentReview.review_id}</p>
         <h2>{currentReview.title}</h2>
+
         <img src={currentReview.review_img_url}></img>
+        <br />
         <p>{currentReview.review_body}</p>
+        <br />
         <section className="Details">
           <p>Designer: {currentReview.designer}</p>
           <p>Category: {currentReview.category}</p>

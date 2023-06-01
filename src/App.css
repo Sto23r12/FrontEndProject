@@ -48,7 +48,7 @@ img {
 }
 
 nav {
-  text-align: right;
+  text-align: end;
 }
 
 .Review {
@@ -81,8 +81,9 @@ nav {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 20px;
-  color: #333;
+  color: #000000;
   width: 1200px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.527);
 }
 
 h3 {

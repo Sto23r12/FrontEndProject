@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getReviews } from "../../utils";
+import "react-horizontal-scrolling-menu/dist/styles.css";
 
 import "../App.css";
 
@@ -23,7 +24,7 @@ export function GetReviews() {
               <strong key={singleReview.title}>{singleReview.title}</strong>
               <br></br>
               <img src={singleReview.review_img_url}></img>
-              <Link to={`/api/reviews/${singleReview.review_id}`}>
+              <Link to={`/reviews/${singleReview.review_id}`}>
                 <br></br>
                 <button type="button">Details:</button>
               </Link>
