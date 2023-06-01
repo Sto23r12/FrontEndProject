@@ -6,17 +6,22 @@ import "../App.css";
 function SingleReview() {
   const [currentReview, setCurrentReview] = useState({});
   const { review_id } = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getSingleReview(review_id).then(({ review }) => {
       setCurrentReview(review[0]);
+      setLoading(false);
     });
   }, [review_id]);
+
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
 
   return (
     <section className="SingleReview">
       <main>
-        <p>Id: {currentReview.review_id}</p>
         <h2>{currentReview.title}</h2>
         <img src={currentReview.review_img_url}></img>
         <br />

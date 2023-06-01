@@ -49,6 +49,12 @@ img {
 
 nav {
   text-align: end;
+  font-size: larger;
+  font: bold;
+}
+
+nav button:hover {
+  transform: scale(1.5);
 }
 
 .Review {
@@ -92,4 +98,9 @@ h3 {
 
 .SingleReview p {
   text-align: justify;
+}
+
+h2 {
+  color: black;
+  text-align: center;
 }

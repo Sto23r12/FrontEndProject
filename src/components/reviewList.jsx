@@ -8,18 +8,21 @@ import "../App.css";
 
 export function GetReviews() {
   const [reviews, setReviews] = useState([]);
-  const [currentReview, setCurrentReview] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getReviews().then(({ reviews }) => {
       setReviews(reviews);
+      setLoading(false);
     });
   }, []);
 
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
   return (
     <div className="page-container">
       <section className="Reviews">
-        <h2>Reviews:</h2>
         {reviews.map((singleReview, index) => {
           return (
             <section className="Review">
