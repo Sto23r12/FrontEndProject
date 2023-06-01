@@ -18,7 +18,7 @@ export function NavBar() {
       <Link to="/api/comments">
         <button type="button">Comments</button>
       </Link>
-      <br></br>
+      <br />
       <button type="button" onClick={handleSubmit}>
         Back
       </button>

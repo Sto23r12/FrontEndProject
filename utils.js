@@ -19,3 +19,11 @@ export function getSingleReview(review_id) {
     return res.json();
   });
 }
+
+export function getCommentsByReviewId(review_id) {
+  return fetch(
+    `https://charliesdatabase.onrender.com/api/reviews/${review_id}/comments`
+  ).then((res) => {
+    return res.json();
+  });
+}
