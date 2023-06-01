@@ -25,17 +25,18 @@ export function GetReviews() {
       <section className="Reviews">
         {reviews.map((singleReview, index) => {
           return (
-            <section className="Review">
-              <p key={singleReview.review_id}>{singleReview.review_id}</p>
-              <strong>{singleReview.title}</strong>
-              <br></br>
-              <img src={singleReview.review_img_url}></img>
-
-              <Link to={`/reviews/${singleReview.review_id}`}>
+            <section key={index} className="Review">
+              <li key={singleReview.review_id}>
+                <strong>{singleReview.title}</strong>
                 <br></br>
-                <button type="button">Details:</button>
-              </Link>
-              <p>Category: {singleReview.category}</p>
+                <img src={singleReview.review_img_url}></img>
+                <p>Owner: {singleReview.owner}</p>
+                <p>Date Created: {singleReview.created_at}</p>
+                <Link to={`/reviews/${singleReview.review_id}`}>
+                  <button type="button">Details:</button>
+                </Link>
+                <p>Category: {singleReview.category}</p>
+              </li>
             </section>
           );
         })}
