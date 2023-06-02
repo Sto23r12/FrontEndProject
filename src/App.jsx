@@ -12,6 +12,10 @@ function App() {
       </header>
       <Routes>
         <Route path="/reviews" element={<GetReviews />} />
+<<<<<<< HEAD
+        <Route path="/reviews/:review_id" element={<SingleReview />} />
+=======
+>>>>>>> main
       </Routes>
     </BrowserRouter>
   );

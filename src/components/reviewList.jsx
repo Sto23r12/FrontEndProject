@@ -18,7 +18,6 @@ export function GetReviews() {
   if (loading) {
     return <h2>Loading...</h2>;
   }
-
   return (
     <div className="page-container">
       <section className="Reviews">
@@ -31,7 +30,7 @@ export function GetReviews() {
                 <img src={singleReview.review_img_url}></img>
                 <p>Owner: {singleReview.owner}</p>
                 <p>Date Created: {singleReview.created_at}</p>
-                <Link to={`/api/reviews/${singleReview.review_id}`}>
+                <Link to={`/reviews/${singleReview.review_id}`}>
                   <button type="button">Details:</button>
                 </Link>
                 <p>Category: {singleReview.category}</p>

@@ -3,13 +3,34 @@
 *::after {
   box-sizing: inherit;
   margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
   padding: 0;
 }
 
 body {
   background-color: #ececec;
   font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-wrap: normal;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: justify;
+  width: 100%;
   padding: 0;
   width: 100%;
   overflow-wrap: normal;
@@ -33,9 +54,19 @@ button {
   font-family: Arial, sans-serif;
   font-size: 34px;
   cursor: pointer;
+  padding: 10px 20px;
+  background-color: #333;
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 h3 {
+  font-size: 24px;
+  color: #333;
   font-size: 24px;
   color: #333;
 }
@@ -55,11 +86,32 @@ nav {
 
 nav button:hover {
   transform: scale(1.5);
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  text-align: end;
+  font-size: larger;
+  font: bold;
+}
+
+nav button:hover {
+  transform: scale(1.5);
 }
 
 .Review {
   background-color: #d4d2d2;
+  background-color: #d4d2d2;
   max-width: 1000px;
+  margin: 30px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #333;
   margin: 30px auto;
   padding: 10px;
   border: 1px solid #ccc;
