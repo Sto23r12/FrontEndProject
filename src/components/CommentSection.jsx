@@ -1,5 +1,5 @@
 import "../App.css";
-import { fixDateFormat } from "../../utils";
+import { fixDateFormat } from "../../Api";
 function CommentSection({ comments }) {
   console.log(comments.msg === "Not found");
   if (comments.msg === "Not found") {

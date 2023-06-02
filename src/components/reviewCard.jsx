@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getSingleReview, getCommentsByReviewId } from "../../utils";
+import { getSingleReview, getCommentsByReviewId } from "../../Api";
 import "../App.css";
 import CommentSection from "./CommentSection";
 

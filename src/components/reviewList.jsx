@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getReviews, getCommentsByReviewId, fixDateFormat } from "../../utils";
+import { getReviews, getCommentsByReviewId, fixDateFormat } from "../../Api";
 
 import "../App.css";
 
@@ -31,10 +31,10 @@ export function GetReviews() {
                 <img src={singleReview.review_img_url}></img>
                 <p>Owner: {singleReview.owner}</p>
                 <p>Date Created: {fixDateFormat(singleReview.created_at)}</p>
+                <p>Category: {singleReview.category}</p>
                 <Link to={`/reviews/${singleReview.review_id}`}>
                   <button type="button">Details:</button>
                 </Link>
-                <p>Category: {singleReview.category}</p>
               </li>
             </section>
           );
