@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getSingleReview } from "../../utils";
+import { getSingleReview } from "../../Api";
 import "../App.css";
 
 export function SingleReview() {
