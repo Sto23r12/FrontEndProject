@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { GetReviews } from "./components/reviewList";
 import "./App.css";
+import { SingleReview } from "./components/reviewCard";
 
 function App() {
   return (
@@ -12,10 +13,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/reviews" element={<GetReviews />} />
-<<<<<<< HEAD
         <Route path="/reviews/:review_id" element={<SingleReview />} />
-=======
->>>>>>> main
       </Routes>
     </BrowserRouter>
   );

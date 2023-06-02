@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { getSingleReview } from "../../utils";
 import "../App.css";
 
-function SingleReview() {
+export function SingleReview() {
   const [currentReview, setCurrentReview] = useState({});
   const { review_id } = useParams();
   const [loading, setLoading] = useState(true);
@@ -39,5 +39,3 @@ function SingleReview() {
     </section>
   );
 }
-
-export default SingleReview;
