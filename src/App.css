@@ -6,11 +6,6 @@
 }
 
 body {
-  background-color: #ececec;
-  font-family: Arial, sans-serif;
-}
-
-body {
   background-color: #f2f2f2;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -25,21 +20,10 @@ header {
   padding: 20px;
   text-align: justify;
   width: 100%;
-  padding: 0;
-  width: 100%;
-  overflow-wrap: normal;
 }
 
 button {
   margin: 5px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: whitesmoke;
-  border: none;
-  border-radius: 4px;
-  font-family: Arial, sans-serif;
-  font-size: 34px;
-  cursor: pointer;
   padding: 10px 20px;
   background-color: #333;
   color: whitesmoke;
@@ -53,8 +37,6 @@ button {
 h3 {
   font-size: 24px;
   color: #333;
-  font-size: 24px;
-  color: #333;
 }
 
 img {
@@ -62,16 +44,7 @@ img {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-}
-
-nav {
-  text-align: end;
-  font-size: larger;
-  font: bold;
-}
-
-nav button:hover {
-  transform: scale(1.5);
+  border: 3px solid black;
 }
 
 nav {
@@ -86,14 +59,7 @@ nav button:hover {
 
 .Review {
   background-color: #d4d2d2;
-  background-color: #d4d2d2;
   max-width: 1000px;
-  margin: 30px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 20px;
-  color: #333;
   margin: 30px auto;
   padding: 10px;
   border: 1px solid #ccc;
@@ -107,12 +73,15 @@ nav button:hover {
 
 .Review:hover {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.541);
+  text-align: center;
+  gap: 30px;
 }
 
 #root {
   width: 100vw;
   overflow: hidden;
 }
+
 .SingleReview {
   background-color: #d4d2d2;
   max-width: 70vw;
@@ -123,6 +92,7 @@ nav button:hover {
   font-size: 20px;
   color: #000000;
   width: 1200px;
+
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.527);
 }
 
@@ -131,7 +101,21 @@ h3 {
 }
 
 .SingleReview p {
-  text-align: justify;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+.details .comment-button {
+  text-align: center;
+}
+
+.CommentSection li {
+  list-style: decimal;
+  background-color: whitesmoke;
 }
 
 h2 {
