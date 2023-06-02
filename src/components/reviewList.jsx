@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getReviews, getCommentsByReviewId, fixDateFormat } from "../../Api";
+import { getReviews, fixDateFormat } from "../../Api";
 
 import "../App.css";
 

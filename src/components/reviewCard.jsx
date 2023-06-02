@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getSingleReview, getCommentsByReviewId } from "../../Api";
 import "../App.css";
 import CommentSection from "./CommentSection";
@@ -57,3 +57,5 @@ function SingleReview() {
     </section>
   );
 }
+
+export default SingleReview;

@@ -1,7 +1,6 @@
 import "../App.css";
 import { fixDateFormat } from "../../Api";
 function CommentSection({ comments }) {
-  console.log(comments.msg === "Not found");
   if (comments.msg === "Not found") {
     return <h2>No Comment Found!</h2>;
   } else {
