@@ -38,7 +38,9 @@ function SingleReview() {
         <h2>{currentReview.title}</h2>
         <img src={currentReview.review_img_url}></img>
         <br />
+        <br />
         <p>{currentReview.review_body}</p>
+        <br />
         <br />
         <section className="Details">
           <p>Designer: {currentReview.designer}</p>
@@ -55,5 +57,3 @@ function SingleReview() {
     </section>
   );
 }
-
-export default SingleReview;

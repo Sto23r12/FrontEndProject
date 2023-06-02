@@ -12,9 +12,10 @@ function App() {
         <NavBar />
         <h1>Games App!</h1>
       </header>
+      <NavBar />
       <Routes>
-        <Route path="/reviews" element={<GetReviews />} />
-        <Route path="/reviews/:review_id" element={<SingleReview />} />
+        <Route path="/api/reviews" element={<GetReviews />} />
+        <Route path="/api/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </BrowserRouter>
   );

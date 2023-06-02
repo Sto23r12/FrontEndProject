@@ -1,4 +1,3 @@
-*,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -74,8 +73,18 @@ nav button:hover {
 
 .Review:hover {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.541);
+  text-align: center;
+  gap: 30px;
 }
 
+.Review:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.541);
+}
+
+#root {
+  width: 100vw;
+  overflow: hidden;
+}
 #root {
   width: 100vw;
   overflow: hidden;
@@ -119,4 +128,9 @@ h2 {
 .CommentSection li {
   margin: 10px;
   border: 5px solid black;
+}
+
+h2 {
+  text-align: center;
+  color: black;
 }

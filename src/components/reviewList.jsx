@@ -19,6 +19,7 @@ export function GetReviews() {
   if (loading) {
     return <h2>Loading...</h2>;
   }
+
   return (
     <div className="page-container">
       <section className="Reviews">
