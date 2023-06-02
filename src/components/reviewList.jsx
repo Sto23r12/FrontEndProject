@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getReviews } from "../../utils";
 
-import SingleReview from "./reviewCard";
-
 import "../App.css";
 
 export function GetReviews() {

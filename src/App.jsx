@@ -3,8 +3,6 @@ import { NavBar } from "./components/NavBar";
 import { GetReviews } from "./components/reviewList";
 import "./App.css";
 
-import SingleReview from "./components/reviewCard";
-
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +12,10 @@ function App() {
       </header>
       <Routes>
         <Route path="/reviews" element={<GetReviews />} />
+<<<<<<< HEAD
         <Route path="/reviews/:review_id" element={<SingleReview />} />
+=======
+>>>>>>> main
       </Routes>
     </BrowserRouter>
   );
