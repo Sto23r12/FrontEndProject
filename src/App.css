@@ -77,18 +77,11 @@ nav button:hover {
   gap: 30px;
 }
 
-.Review:hover {
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.541);
+#root {
+  width: 100vw;
+  overflow: hidden;
 }
 
-#root {
-  width: 100vw;
-  overflow: hidden;
-}
-#root {
-  width: 100vw;
-  overflow: hidden;
-}
 .SingleReview {
   background-color: #d4d2d2;
   max-width: 70vw;
@@ -121,10 +114,8 @@ h2 {
 }
 
 .CommentSection li {
-  background-color: white;
-  text-align: center;
-  margin: 10px;
-  border: 5px solid black;
+  list-style: decimal;
+  background-color: whitesmoke;
 }
 
 h2 {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getSingleReview, getCommentsByReviewId } from "../../Api";
 import "../App.css";
 import CommentSection from "./CommentSection";
@@ -10,6 +10,11 @@ function SingleReview() {
   const [loading, setLoading] = useState(true);
   const [comments, setComments] = useState([]);
   const [showComments, setShowComments] = useState(false);
+
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     getSingleReview(review_id).then(({ review }) => {
@@ -52,6 +57,9 @@ function SingleReview() {
             {showComments ? "Hide Comments" : "Show Comments"}
           </button>
           {showComments && <CommentSection comments={comments} />}
+          <button type="button" onClick={handleSubmit}>
+            Back
+          </button>
         </section>
       </main>
     </section>

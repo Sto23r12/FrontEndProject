@@ -6,19 +6,17 @@ function CommentSection({ comments }) {
   } else {
     return (
       <section className="CommentSection">
-        <ul>
-          {comments.comments.map((comment) => {
-            console.log(Object.keys(comment));
-            return (
-              <li key={comment.comment_id}>
-                <p>Comment: {comment.body}</p>
-                <p>By: {comment.author}</p>
-                <p>Created At: {fixDateFormat(comment.created_at)}</p>
-                <p>Votes: {comment.votes}</p>
-              </li>
-            );
-          })}
-        </ul>
+        {comments.comments.map((comment) => {
+          console.log(Object.keys(comment));
+          return (
+            <li>
+              <p>Comment: {comment.body}</p>
+              <p>By: {comment.author}</p>
+              <p>Created At: {fixDateFormat(comment.created_at)}</p>
+              <p>Votes: {comment.votes}</p>
+            </li>
+          );
+        })}
       </section>
     );
   }
